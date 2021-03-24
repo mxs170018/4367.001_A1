@@ -2,7 +2,7 @@
 MXS170018
 
 PART 1: 
-Deliverables: DominatorFinder.Java 
+File Deliverables: DominatorFinder.Java 
 
 In order to ensure that the "doAnalysis" method worked correctly I did a few things:
 
@@ -52,7 +52,12 @@ Not suprisingly, the output of testDominatorFinder.Java matches up with the manu
 
 
 PART 2: 
-Deliverables 
+File Deliverables: none 
+
+Well, the question was answered but im putting it anyways: Animal.saySomething() calls Cat.saySomething()
+
+Now for the analysis between the two 
+
 
 
 
