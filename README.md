@@ -59,12 +59,30 @@ Well, the question was answered but im putting it anyways: Animal.saySomething()
 Now for the analysis between the two using example.Java provided in documentation
 
 
+
 Class Heirachy Analysis (Soot): 
+it created a total of 12 edges every time
+Run 1: 4 seconds
+Run 2: 2 seconds 
+Run 3: 1 second
+Run 4: 2 seconds
+Run 5: 2 seconds
 
-Points-To Analysis (Spark):
+Points-To Analysis (Spark): 
+It created a total of 7 edges every time
+Run 1: 4 seconds
+Run 2: 2 seconds 
+Run 3: 2 seconds
+Run 4: 2 seconds
+Run 5: 2 seconds 
 
+They seem equal in speed, although we know that Points-To Analysis is more complex and therefore should take more time 
 
+PTA is more precise because the output closesly mirrors what the output of the program would be had we run it 
 
+I don't think less edges means more precise, but if it does, it's worth noting that PTA has less edges than CHA for the example
+
+PART 3: 
 
 
 
