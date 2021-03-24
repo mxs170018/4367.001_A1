@@ -13,20 +13,23 @@ The doAnalysis() method is word for word identical. Although, there is always a 
 second, I ran testSoot.Java (provided in project documentation) to gather all of the statement nodes from GCD.Java 
 Then I manually assigned them node numbers and dominators to check against what the program is outputting 
 
-testSoot.Java output // dominated by 
+testSoot.Java output // is dominated by 
 
 1: i0 := @parameter0: int // 1
-2: i1 := @parameter1: int // 2
-3: if i0 <= i1 goto i8 = i0 // 3
-4: i7 = i1 // 4
-5: goto [?= (branch)] // 5
-6: $i5 = i0 % i7 // 6
-7: if $i5 != 0 goto i7 = i7 + -1 // 7
+2: i1 := @parameter1: int // 1,2
+3: if i0 <= i1 goto i8 = i0 // 1,2,3
+//for(int i = i0;
+4: i7 = i1 // 1,2,3,4
+5: goto [?= (branch)] // 1,2,3,4,5
+6: $i5 = i0 % i7 // 1,2,3,4,5,6,12
+7: if $i5 != 0 goto i7 = i7 + -1 // 1,2,3,4,5,7
 8: $i6 = i1 % i7 //8
 9: if $i6 != 0 goto i7 = i7 + -1 // 9
 10: return i7 // 10
+//i >= 1;i--;)
 11: i7 = i7 + -1 //11
 12: if i7 >= 1 goto $i5 = i0 % i7 //12
+
 13: goto [?= return 1] //13
 14: i8 = i0 //14
 15: goto [?= (branch)] //15
