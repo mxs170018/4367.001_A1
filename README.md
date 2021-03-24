@@ -56,8 +56,12 @@ File Deliverables: none
 
 Well, the question was answered but im putting it anyways: Animal.saySomething() calls Cat.saySomething()
 
-Now for the analysis between the two 
+Now for the analysis between the two using example.Java provided in documentation
 
+
+Class Heirachy Analysis (Soot): 
+
+Points-To Analysis (Spark):
 
 
 
