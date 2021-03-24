@@ -1,7 +1,7 @@
 # 4367.001_A1
 MXS170018
 
-Part 1: 
+PART 1: 
 Deliverables: DominatorFinder.Java 
 
 In order to ensure that the "doAnalysis" method worked correctly I did a few things:
@@ -27,7 +27,7 @@ testSoot.Java output // is dominated by
 9: if $i6 != 0 goto i7 = i7 + -1 // 1,2,3,4,5,6,7,8,9,12
 10: return i7 // 1,2,3,4,5,6,7,8,9,10,12
 
-11: i7 = i7 + -1 //1,2,3,4,5,6,9,11,12
+11: i7 = i7 + -1 //1,2,3,4,5,6,7,11,12
 12: if i7 >= 1 goto $i5 = i0 % i7 //1,2,3,4,5,12
 
 13: goto [?= return 1] //1,2,3,4,5,12,13
@@ -40,13 +40,23 @@ testSoot.Java output // is dominated by
 19: if $i4 != 0 goto i8 = i8 + -1 //1,2,3,14,15,16,17,18,19,22
 20: return i8 //1,2,3,14,15,16,17,18,19,20,22
 
-21: i8 = i8 + -1 //1,2,3,14,15,16,21,22
-22: if i8 >= 1 goto $i3 = i0 % i8 //22
+21: i8 = i8 + -1 //1,2,3,14,15,16,17,21,22
+22: if i8 >= 1 goto $i3 = i0 % i8 //1,2,3,14,15,22
 
-23: return 1 //23
+23: return 1 //1,2,3,23
 
+Not suprisingly, the output of testDominatorFinder.Java matches up with the manual assignment of variables 
+(i did not include the output of testDominatorFinder.Java because it adds a good 150 lines, but you can bet i counted and refereneced each statement)
 
 (((( THIS WAS SO TIME CONSUMING, HOW CAN ANYONE EVER WANT TO DO THIS TO THEMSELVES))))
+
+
+PART 2: 
+Deliverables 
+
+
+
+
 
 
 
