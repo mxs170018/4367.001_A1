@@ -1,5 +1,8 @@
 # 4367.001_A1
 MXS170018
+4367.001
+
+I strongly recommend you view this readme file in raw format or download it because the default formatting is janky. 
 
 PART 1: 
 File Deliverables: DominatorFinder.Java 
@@ -83,9 +86,27 @@ PTA is more precise because the output closesly mirrors what the output of the p
 I don't think less edges means more precise, but if it does, it's worth noting that PTA has less edges than CHA for the example
 
 PART 3: 
+File Deliverables: none 
 
+I) 
+Example.Jimple, the output of running testSootLogging.Java, seems to be in a simplified sort of machine language. More importantly, it shows where methods are called. for example "calling println()"
 
+II) yoooo, this is crazy. Why does this work though? i might develop some future projects in java8 so i can use jimple to see stuff like this. It's useful 
 
+manuelsalad$ ls
+
+Animal.class	Cat.class	Example.class	Fish.class
+Animal.jimple	Cat.jimple	Example.jimple	Fish.jimple
+
+manuelsalad$ java Example
+
+calling selectAnimal
+calling println
+An animal will say something
+calling saySomething
+purr
+
+PART 4: 
 
 
 
