@@ -106,7 +106,10 @@ An animal will say something
 calling saySomething
 purr
 
+
 TRACING HEAP: 
+File Deliverables: TestSootLoggingHeap.Java
+
 
 
 
