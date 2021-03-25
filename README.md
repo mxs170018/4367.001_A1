@@ -106,7 +106,8 @@ An animal will say something
 calling saySomething
 purr
 
-PART 4: 
+TRACING HEAP: 
+
 
 
 
