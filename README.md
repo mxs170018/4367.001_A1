@@ -110,6 +110,8 @@ purr
 TRACING HEAP: 
 File Deliverables: TestSootLoggingHeap.Java
 
+I couldnt find a way to invoke the log.java file but i was able to print field references, if its static and some other information. 
+
 
 
 
