@@ -110,17 +110,15 @@ purr
 TRACING HEAP: 
 File Deliverables: TestSootLoggingHeap.Java
 
-I couldnt find a way to invoke the log.java file but i was able to print field references, if its static and some other information. 
+I couldnt find a way to find the isWrite boolean working but here is what i got otherwise 
 
-here is the output for helloThread
-
-Field Reference: <HelloThread: int x> Declaring class: HelloThread is static: true
-Field Reference: <HelloThread: int x> Declaring class: HelloThread is static: true
-Field Reference: r0.<HelloThread$TestThread: int y> Declaring class: HelloThread$TestThread is static: false
-Field Reference: r0.<HelloThread$TestThread: int y> Declaring class: HelloThread$TestThread is static: false
-Field Reference: $r2.<HelloThread$TestThread: int y> Declaring class: HelloThread$TestThread is static: false
-Field Reference: <HelloThread: int x> Declaring class: HelloThread is static: true
-Field Reference: <java.lang.System: java.io.PrintStream out> Declaring class: java.lang.System is static: true
+Thread Thread-9 read static field <HelloThread: int x>
+Thread Thread-10 read static field <HelloThread: int x>
+Thread Thread-10 read instance field <HelloThread$TestThread: int y> of object Thread[Thread-10,5,Soot Threadgroup]
+Thread Thread-10 read instance field <HelloThread$TestThread: int y> of object Thread[Thread-10,5,Soot Threadgroup]
+Thread Thread-9 read instance field <HelloThread$TestThread: int y> of object Thread[Thread-9,5,Soot Threadgroup]
+Thread Thread-9 read static field <HelloThread: int x>
+Thread Thread-9 read static field <java.lang.System: java.io.PrintStream out>
 
 
 
