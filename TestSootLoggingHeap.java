@@ -69,20 +69,24 @@ public class TestSootLoggingHeap extends BodyTransformer {
 		    	if (stmt.containsFieldRef()) {
 		    		//field
 		    		
-		    		System.out.print("Field Reference: " + stmt.getFieldRef() );
+		    		String threadName = stmt.getFieldRef().getField().toString(); 
+		    		Object obj = Thread.currentThread(); 
+		    		boolean stat = stmt.getFieldRef().getFieldRef().isStatic(); 
+		    		boolean write = false; 
+		    		
+		    		
+		    		//System.out.print("Field Reference: " + stmt.getFieldRef() );
 		    		
 		    		//System.out.println(stmt);
 		    		//logFieldAcc();
 		    		
-		    		//InvokeExpr log = Jimple.v().newVirtualInvokeExpr(stmt, logFieldAccMethod);
-		    		//InvokeExpr printExpr = Jimple.v().newVirtualInvokeExpr(logFieldAcc, printMethod, StringConstant.v("calling "+name));
-		    		//InvokeStmt invokeStmt = Jimple.v().newInvokeStmt(printExpr);
-		    		//logStart(stmt);
 		    		
+		    		//logStart(stmt);
+		    		Log.logFieldAcc(obj, threadName, stat, write);
 
-		    		System.out.print(" Declaring class: " + stmt.getFieldRef().getField().getDeclaringClass());
+		    		//System.out.print(" Declaring class: " + stmt.getFieldRef().getField().getDeclaringClass());
 
-		    		System.out.println(" is static: " + stmt.getFieldRef().getFieldRef().isStatic());
+		    		//System.out.println(" is static: " + stmt.getFieldRef().getFieldRef().isStatic());
 		    		
 		    		//your code starts here
 		    	}
